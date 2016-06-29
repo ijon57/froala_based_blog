@@ -1,0 +1,20 @@
+<%= form_for @post do |f| %>
+  <div class="row">
+    <%= f.text_field :title, style: 'width:100%', placeholder: 'Post title' %>
+  </div>
+  <div class="row" style="padding: 10px 0;">
+    <%= f.text_area :text, id: "edit" %>
+  </div>
+  <div class="row">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<script>
+    $(function() {
+        $('#edit').froalaEditor({
+          height: 600,
+          placeholderText: 'Post text'
+        })
+    });
+</script>
