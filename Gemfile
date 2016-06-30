@@ -23,11 +23,10 @@ group :development do
 end
 group :production do
   gem 'rails_12factor'
+  # heroku specific
+  gem 'rails_serve_static_assets'
+  gem 'rails_stdout_logging'
 end
 
 gem "wysiwyg-rails"
 gem "html_truncator"
-
-# heroku specific
-gem 'rails_serve_static_assets'
-gem 'rails_stdout_logging'
